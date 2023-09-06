@@ -1,6 +1,10 @@
 from django.shortcuts import render
 
 def addproduct(request):
-    return request(request,
-        'goodies/add_product.html'
+    return render(request,
+        'manager/add_product.html'
     )
+
+def home(request):
+    return render (request,
+    'manager/home.html')

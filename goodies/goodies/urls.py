@@ -1,10 +1,12 @@
 
 from django.contrib import admin
-from django.urls import path
-from manager import views
+from django.urls import path, include
+from user import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('add/', views.addproduct),
-    path('home/', views.home),
+    path('home/', views.Home, name = "home"),
+    path('cart/', views.Cart, name = "cart"),
+    path('checkout/', views.Checkout, name = "checkout"),
+    path('store/', views.Store, name = "store"),
 ]
